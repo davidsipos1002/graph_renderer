@@ -1,0 +1,54 @@
+var exercises = 
+`
+<exercises>
+	<exercise>
+		<type>1</type>
+		<directed>1</directed>
+		<title>2</title>
+		<load>1</load>
+		<text>+5+95</text>
+		<sub>a</sub>
+		<sub>b</sub>
+		<graph>
+			<n>5</n>
+			<m>3</m>
+			<nodes>
+				<node>
+					<x>100</x>
+					<y>82</y>
+				</node>
+				<node>
+					<x>363</x>
+					<y>285</y>
+				</node>
+				<node>
+					<x>82</x>
+					<y>297</y>
+				</node>
+				<node>
+					<x>371</x>
+					<y>141</y>
+				</node>
+				<node>
+					<x>287</x>
+					<y>442</y>
+				</node>
+			</nodes>
+			<edges>
+				<edge>
+					<n1>1</n1>
+					<n2>3</n2>
+				</edge>
+				<edge>
+					<n1>3</n1>
+					<n2>2</n2>
+				</edge>
+				<edge>
+					<n1>2</n1>
+					<n2>4</n2>
+				</edge>
+			</edges>
+		</graph>
+	</exercise>
+</exercises>
+`;

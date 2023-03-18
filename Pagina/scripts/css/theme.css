@@ -1,0 +1,80 @@
+@font-face {
+    font-family: 'AlfaSlabOne';
+    src: url("../../res/fonts/AlfaSlabOne-Regular.ttf");
+}
+
+@font-face {
+    font-family: 'DMSans Regular';
+    src: url("../../res/fonts/DMSans-Regular.ttf");
+}
+
+@font-face {
+    font-family: 'DMSans Bold';
+    src: url("../../res/fonts/DMSans-Bold.ttf");
+}
+
+.theme-light
+{
+    --background: url('../../res/light/lightThemeBG.png');
+    --content_holder:	#eeeeee;
+    --menu_background: white;
+    --button_next: url('../../res/light/butonInainteInapoi.png');
+    --button_contents: url('../../res/light/butonCuprins.png');
+    --button_contents_x: url('../../res/light/butonCuprinsX.png');
+    --button_settings: url('../../res/light/butonSetari.png');
+    --button_settings_x: url('../../res/light/butonSetariX.png');
+    --button_help: url('../../res/light/butonAjutor.png');
+    --button_help_x: url('../../res/light/butonAjutorX.png');
+    --button_theory: url('../../res/light/butonTeorie.png');
+    --button_theory_x: url('../../res/light/butonAjutorX.png');
+    --button_plus: url('../../res/light/buton+.png');
+    --button_edit: url('../../res/light/btnCreion.png');
+    --button_remove: url('../../res/light/btnRadiera.png');
+    --button_delete: url('../../res/light/buton_x.png');
+    --graph_background: #895031;
+    --node_color: #eeeeee;
+    --node_text_color: #895031;
+    --edge_color: #eeeeee;
+    --node_selected_color: #e3995f;
+    --text_color: #895031;
+    --popup_background: white;
+    --popup_button: #e3995f;
+    --popup_header_background: #895031;
+    --popup_header_text_color: #eeeeee;
+    --popup_border_color: #e3995f;
+    --exercise_icon: url('../../res/common/exercitiuList1.png');
+    --ruler_icon: url('../../res/common/iconEx3.png');
+}
+
+.theme-dark
+{
+    --background: url('../../res/dark/darkThemeBG.png');
+    --content_holder:	#202020;
+    --menu_background: black;
+    --button_next: url('../../res/dark/butonInainteInapoi.png');
+    --button_contents: url('../../res/dark/butonCuprins.png');
+    --button_contents_x: url('../../res/dark/butonCuprinsX.png');
+    --button_settings: url('../../res/dark/butonSetari.png');
+    --button_settings_x: url('../../res/dark/butonSetariX.png');
+    --button_help: url('../../res/dark/butonAjutor.png');
+    --button_help_x: url('../../res/dark/butonAjutorX.png');
+    --button_theory: url('../../res/dark/butonTeorie.png');
+    --button_theory_x: url('../../res/dark/butonAjutorX.png');
+    --button_plus: url('../../res/dark/buton+.png');
+    --button_edit: url('../../res/dark/btnCreion.png');
+    --button_remove: url('../../res/dark/btnRadiera.png');
+    --button_delete: url('../../res/dark/buton_x.png');
+    --graph_background: #3c494c;
+    --node_color: #202020;
+    --node_text_color: #99c1cb;
+    --edge_color: #202020;
+    --node_selected_color: #eeeeee;
+    --text_color: #eeeeee;
+    --popup_background: black;
+    --popup_button: #3c494c;
+    --popup_header_background: #3c494c;
+    --popup_header_text_color: #99c1cb;
+    --popup_border_color: #895031;
+    --exercise_icon: url('../../res/common/exercitiuList1.png');
+    --ruler_icon: url('../../res/common/iconEx3.png');
+}

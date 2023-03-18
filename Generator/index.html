@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        <link rel= "stylesheet" type= "text/css" href= "scripts/css/theme.css">
+        <link rel= "stylesheet" type= "text/css" href= "scripts/css/index.css">
+        <title>Generator</title>
+    </head>
+
+    <body>
+        <fieldset>
+            <legend>Cuprins:</legend>
+            <br>
+            <fieldset>
+                <input type = "file" id = "content-selector" accept = ".js"> 
+                <legend>Capitole:</legend>
+                <br>
+                <label for = "chapterSelect">Capitole existente:</label>
+                <select id = "chapterSelect" name = "chapterSelect"></select> 
+                <br> <br>
+                <button id = "newChapter">Capitol nou</button>
+                <button id = "saveChapter">Salvare</button>
+                <br> <br>
+                <label for = "chapterTitle">Titlu:&nbsp;&nbsp;</label>
+                <input type = "text" id = "chapterTitle" name = "chapterTitle"></input>
+                <br> <br>
+                <label>Subcapitole:</label>
+                <br> <br>
+                <button id = "newSubchapter">Subcapitol nou</button>
+                <ol id = "subchapterOl">
+                </ol>
+                <br> <br>
+                <button id = "generateContents">Generare cuprins</button>
+            </fieldset>
+            <br>
+            <fieldset>
+                <input type = "file" id = "exercise-selector" accept = ".js"> 
+                <legend>Exerciții:</legend>
+                <br>
+                <label for = "exerciseSelect">Exercitii existente:</label>
+                <select id = "exerciseSelect" name = "exerciseSelect"></select>
+                <br> <br>
+                <button id = "newExercise">Exercițiu nou</button>
+                <button id = "saveExercise">Salvare</button>
+                <br> <br>
+                <label for = "exerciseType">Tipul exercițiului:&nbsp;&nbsp;</label>
+                <select id = "exerciseType" name = "exerciseType">
+                    <option value = "1">Întrebare</option>
+                    <option value = "2">Desenare graf</option>
+                </select> 
+                <label for = "graphType">&nbsp;&nbsp;Graf:&nbsp;&nbsp;</label>
+                <select id = "graphType" name = "graphType">
+                    <option value = "undirected">neorientat</option>
+                    <option value = "directed">orientat</option>
+                </select>
+                &nbsp;&nbsp;
+                <input type="checkbox" id="loadGraph" name="loadGraph" value="loadGraph">
+                <label for="loadGraph">&nbsp;Exportare graf&nbsp;&nbsp;</label>
+                <br> <br>
+                <label for = "exerciseTitle">Titlu:&nbsp;&nbsp;</label>
+                <input type = "text" id = "exerciseTitle" name = "exerciseTitle"></input>
+                <br> <br>
+                <label for = "exercise">Cerință:&nbsp;&nbsp;</label>
+                <input type = "text" id = "exercise" name = "exercise"></input>
+                <br> <br>
+                <div id = "subExercisesDiv">
+                    <label>Subpuncte:</label>
+                    <button id = "newSubExercise">Subpunct nou</button>
+                    <ol id = "subExerciseOl">
+                   
+                    </ol>                    
+                </div>
+                <div id = "graphDiv">
+                    <button id = "newNode">Adăugare nod</button>
+                    <button id = "newEdge">Adăugare muchii/arce</button>
+                    <button id = "moveNode">Mutare nod</button>
+                    <button id = "removeEdge">Șterge muchii/arce</button>
+                    <button id = "deleteGraph">Șterge graful</button>
+                    <br> <br>
+                    <canvas id = "canvas" class = "graf"></canvas>
+                </div>
+                <br> <br>
+                <button id = "generateExercises">Generare exerciții</button>
+            </fieldset>
+        </fieldset>
+
+        <script type = "text/javascript" src = "scripts/js/engine/directed/nodes.js"></script>
+        <script type = "text/javascript" src = "scripts/js/engine/directed/edges.js"></script>
+        <script type = "text/javascript" src = "scripts/js/engine/directed/graph.js"></script>
+        <script type = "text/javascript" src = "scripts/js/engine/undirected/nodes.js"></script>
+        <script type = "text/javascript" src = "scripts/js/engine/undirected/edges.js"></script>
+        <script type = "text/javascript" src = "scripts/js/engine/undirected/graph.js"></script>
+        <script type = "text/javascript" src = "scripts/js/engine/toggle.js"></script>
+        <script type = "text/javascript" src = "scripts/js/engine/input.js"></script>
+        <script type = "text/javascript" src = "scripts/js/engine/main.js"></script>
+        <script type = "text/javascript" src = "scripts/js/contents.js"></script>
+        <script type = "text/javascript" src = "scripts/js/exercises.js"></script>
+    </body>
+</html>

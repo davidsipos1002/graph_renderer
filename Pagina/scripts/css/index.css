@@ -1,0 +1,628 @@
+body
+{
+    height: 100%;
+    overflow: hidden;
+}
+
+html
+{
+    background-image: var(--background);
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+div.content
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#Nodes.show
+{
+    opacity: 1;
+    z-index: 1;
+    pointer-events: auto;
+}
+
+#Nodes
+{
+    opacity: 0;
+    cursor: pointer;
+    transition: opacity 0.3s;
+    color: var(--text_color);
+    background-color: var(--menu_background);
+    border-radius: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    pointer-events: none;
+}
+
+#Popup
+{
+    cursor: pointer;
+    color: var(--text_color);
+    background-color: var(--popup_button);
+    border-radius: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    display: flex;
+    justify-content: center;
+    width: 200px;
+    height: 150px;
+}
+
+
+#Edges.show
+{
+    opacity: 1;
+    z-index: 1;
+    pointer-events: auto;
+}
+
+#Edges
+{
+    opacity: 0;
+    cursor: pointer;
+    transition: opacity 0.3s;
+    color: var(--text_color);
+    background-color: var(--menu_background);
+    border-radius: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    pointer-events: none;
+}
+
+button.add
+{
+    background: var(--button_plus) no-repeat;
+    background-size: cover;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    width: 70px;
+    height: 70px;
+}
+
+button.edit
+{
+    background: var(--button_edit) no-repeat;
+    background-size: cover;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    width: 69px;
+    height: 69px;
+}
+
+button.remove
+{
+    background: var(--button_remove) no-repeat;
+    background-size: cover;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    width: 69px;
+    height: 69px;
+}
+
+button.delete
+{
+    background: var(--button_delete) no-repeat;
+    background-size: cover;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    width: 70px;
+    height: 70px;
+}
+
+div.buttons
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5px;
+}
+
+
+canvas.graf
+{
+    border-radius: 40px;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+div.content-holder
+{
+    border-radius: 40px;
+    background-color: var(--content_holder);
+    margin: 3%;
+    position: relative;
+    max-height: 80%;
+    min-height: 80%;
+    padding: 50px;
+}
+
+ul.list1
+{
+    list-style: none;
+    font-family: "DMSans Bold";
+    font-size: 25px;
+    color: var(--text_color);
+}
+
+ul.list1 li::before
+{
+    content: "\2022";
+    color: var(--text_color);
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
+
+ul.list2
+{
+    list-style: none;
+    font-family: "DMSans Regular";
+    font-size: 20px;
+    color: var(--text_color);
+}
+
+ul.list2 li::before
+{
+    content: "\2022";
+    color: var(--text_color);
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
+
+#cuprinsDiv {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+#cuprinsDiv::-webkit-scrollbar {
+    display: none;
+}
+
+#cuprinsDiv
+{
+    display: flex;
+    flex-direction: column;
+    background: var(--menu_background);
+    flex-grow: 1;
+    overflow: auto;
+    min-height: 0;
+}
+
+#ajutorDiv {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+#ajutorDiv::-webkit-scrollbar {
+    display: none;
+}
+
+#ajutorDiv
+{
+    display: flex;
+    flex-direction: column;
+    background: var(--menu_background);
+    flex-grow: 1;
+    overflow: auto;
+    margin: 20px;
+    min-height: 0;
+    font-family: DMSans Regular; 
+    color: var(--text_color); 
+    font-size: 16px;
+}
+
+#teorieDiv {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+#teorieDiv::-webkit-scrollbar {
+    display: none;
+}
+
+#teorieDiv
+{
+    display: flex;
+    flex-direction: column;
+    background: var(--menu_background);
+    flex-grow: 1;
+    overflow: auto;
+    margin: 20px;
+    min-height: 0;
+    font-family: DMSans Regular; 
+    color: var(--text_color); 
+    font-size: 16px;
+}
+
+#contentsDiv
+{
+    opacity: 0;
+    transition: opacity 0.3s;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: 40px;
+    background-color: var(--menu_background);
+    width: 25%;
+    padding: 50px;
+    max-height: 88.7%;
+    min-height: 88.7%;
+    pointer-events: none;
+}
+
+#contentsDiv.show
+{
+    opacity: 1;
+    z-index: 1;
+    pointer-events: auto;
+}
+
+#contentsCircle.show
+{
+    opacity: 1;
+    z-index: 2;
+}
+
+#contentsCircle
+{
+    opacity: 0;
+    transition: opacity 0.3s;
+    position: absolute;
+    top: -45px;
+    right: -45px;
+    height: 120px;
+    width: 120px;
+    border-radius: 60px;
+    background-color: var(--menu_background);
+}
+
+#settingsDiv
+{
+    opacity: 0;
+    transition: opacity 0.3s;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: 40px;
+    background-color: var(--menu_background);
+    width: 25%;
+    padding: 50px;
+    max-height: 88.7%;
+    min-height: 88.7%;
+    pointer-events: none;
+}
+
+#settingsDiv.show
+{
+    opacity: 1;
+    z-index: 1;
+    pointer-events: auto;
+}
+
+#settingsCircle.show
+{
+    opacity: 1;
+    z-index: 2;
+}
+
+#settingsCircle
+{
+    opacity: 0;
+    transition: opacity 0.3s;
+    position: absolute;
+    top: 65px;
+    right: -45px;
+    height: 120px;
+    width: 120px;
+    border-radius: 60px;
+    background-color: var(--menu_background);
+}
+
+#helpDiv
+{
+    opacity: 0;
+    transition: opacity 0.3s;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: 40px;
+    background-color: var(--menu_background);
+    width: 25%;
+    padding: 50px;
+    max-height: 88.7%;
+    min-height: 88.7%;
+    pointer-events: none;
+}
+
+#helpDiv.show
+{
+    opacity: 1;
+    z-index: 1;
+    pointer-events: auto;
+}
+
+#helpCircle.show
+{
+    opacity: 1;
+    z-index: 2;
+}
+
+#helpCircle
+{
+    opacity: 0;
+    transition: opacity 0.3s;
+    position: absolute;
+    top: 175px;
+    right: -45px;
+    height: 120px;
+    width: 120px;
+    border-radius: 60px;
+    background-color: var(--menu_background);
+}
+
+#theoryDiv.show
+{
+    opacity: 1;
+    z-index: 2;
+    pointer-events: auto;
+}
+
+#theoryDiv
+{
+    opacity: 0;
+    transition: opacity 0.3s;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 40px;
+    background-color: var(--menu_background);
+    width: 40%;
+    padding: 50px;
+    max-height: 88.7%;
+    min-height: 88.7%;
+    pointer-events: none;
+}
+
+#theoryCircle.show
+{
+    opacity: 1;
+    z-index: 2;
+}
+
+#theoryCircle
+{
+    opacity: 0;
+    transition: opacity 0.3s;
+    position: absolute;
+    top: -45px;
+    left: -45px;
+    height: 120px;
+    width: 120px;
+    border-radius: 60px;
+    background-color: var(--menu_background);
+}
+
+#lightThemeCircle
+{
+    min-width: 50px;
+    max-width: 50px;
+    min-height: 50px;
+    max-height: 50px;
+    border: var(--text_color) 3px solid;
+    border-radius: 30px;
+    margin: 15px;
+    background-color: #eeeeee;
+}
+
+#darkThemeCircle
+{
+    min-width: 50px;
+    max-width: 50px;
+    min-height: 50px;
+    max-height: 50px;
+    border: var(--text_color) 3px solid;
+    border-radius: 30px;
+    margin: 15px;
+    background-color: #202020;
+}
+
+button.next
+{
+    background: var(--button_next) no-repeat;
+    background-size: cover;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    bottom: -35px;
+    right: -35px;
+    z-index: 4;
+}
+
+button.back
+{
+    background: var(--button_next) no-repeat;
+    background-size: cover;
+    transform: scaleX(-1);
+    cursor: pointer;
+    border: none;
+    outline: none;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    bottom: -35px;
+    left: -35px;
+    z-index: 4;
+}
+
+button.contents
+{
+    background: var(--button_contents) no-repeat;
+    background-size: cover;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: -35px;
+    right: -35px;
+    z-index: 3;
+}
+
+button.contents_x
+{
+    background: var(--button_contents_x) no-repeat;
+    background-size: cover;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: -35px;
+    right: -35px;
+    z-index: 3;
+}
+
+button.settings
+{
+    background: var(--button_settings) no-repeat;
+    background-size: cover;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 75px;
+    right: -35px;
+    z-index: 3;
+}
+
+button.settings_x
+{
+    background: var(--button_settings_x) no-repeat;
+    background-size: cover;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 75px;
+    right: -35px;
+    z-index: 3;
+}
+
+button.help
+{
+    background: var(--button_help) no-repeat;
+    background-size: cover;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 185px;
+    right: -35px;
+    z-index: 3;
+}
+
+button.help_x
+{
+    background: var(--button_help_x) no-repeat;
+    background-size: cover;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 185px;
+    right: -35px;
+    z-index: 3;
+}
+
+button.theory
+{
+    background: var(--button_theory) no-repeat;
+    background-size: cover;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: -35px;
+    left: -35px;
+    z-index: 3;
+}
+
+button.theory_x
+{
+    background: var(--button_theory_x) no-repeat;
+    background-size: cover;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: -35px;
+    left: -35px;
+    z-index: 3;
+}
+
+
+iframe.pdf
+{
+    flex-grow: 3;
+    min-height: 100%;
+    max-height: 100%;
+    min-width: 100%;
+    max-width: 100%;
+}

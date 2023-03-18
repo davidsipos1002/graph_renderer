@@ -1,0 +1,77 @@
+#popup.show
+{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+#popup {
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.3s;
+    position: absolute;
+    z-index: 9;
+    border-radius: 40px;
+    border: 5px solid var(--popup_border_color);
+    background-color: var(--popup_background);
+    max-width: 40%;
+    padding-bottom: 50px;
+}
+
+#popupheader
+{
+    padding: 1px;
+    cursor: move;
+    z-index: 10;
+    border-radius: 40px;
+    background-color: var(--popup_header_background);
+    color: var(--popup_header_text_color);
+    text-align: center;
+}
+
+#popupcontent {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+#popupcontent::-webkit-scrollbar {
+    display: none;
+}
+
+#popupcontent
+{
+    padding: 30px;
+    font-family: DMSans Regular; 
+    font-size: 16px;
+    color: var(--text_color);
+    display: flex;
+    overflow: auto;
+    max-height: 400px;
+}
+
+ul.exercises
+{
+    list-style-image: var(--exercise_icon);
+}
+
+ul.info
+{
+    list-style-image: var(--ruler_icon);
+}
+
+li.info
+{
+    font-family: DMSans Bold; 
+    font-size: 20px;
+}
+
+input[type = text]
+{
+    border: 2px solid var(--popup_header_background);
+    font-family: DMSans Regular; 
+    font-size: 16px;
+    border-radius: 20px;
+    padding: 5px;
+    color: var(--text_color);
+    outline-width: 0px;
+    background-color: var(--popup_background);
+}

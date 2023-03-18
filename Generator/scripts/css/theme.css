@@ -1,0 +1,28 @@
+@font-face {
+    font-family: 'AlfaSlabOne';
+    src: url("../../res/fonts/AlfaSlabOne-Regular.ttf");
+}
+
+@font-face {
+    font-family: 'DMSans Regular';
+    src: url("../../res/fonts/DMSans-Regular.ttf");
+}
+
+@font-face {
+    font-family: 'DMSans Bold';
+    src: url("../../res/fonts/DMSans-Bold.ttf");
+}
+
+.theme
+{
+    --background: url('../../res/images/background.png');
+    --button_color: #895031;
+    --textinput_border: #895031;
+    --text_color: black;
+    --list_textcolor: #eeeeee;
+    --graph_background: #895031;
+    --node_color: #eeeeee;
+    --node_text_color: #895031;
+    --edge_color: #eeeeee;
+    --node_selected_color: #e3995f;
+}
